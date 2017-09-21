@@ -39,10 +39,15 @@ get '/users/new' do
 end
 
 post '/users' do
-  user = User.create(email: params[:email],
-                    password: params[:password])
-  session[:user_id] = user.id
-  redirect to('/links')
+  # if params[:password] != params[:password_confirmation]
+  #   redirect to('users/new')
+  # else
+    user = User.create(email: params[:email],
+                    password: params[:password],
+                    password_confirmation: params[:password_confirmation])
+    session[:user_id] = user.id
+    redirect to('/links')
+  # end
 end
 
 helpers do
