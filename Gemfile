@@ -10,6 +10,8 @@ gem 'dm-migrations'
 gem 'rubocop'
 gem 'shotgun'
 gem 'database_cleaner'
+gem 'rake'
+gem 'bcrypt'
 
 group :test do
   gem 'rspec'

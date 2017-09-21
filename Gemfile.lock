@@ -123,11 +123,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt
   capybara
   data_mapper
   database_cleaner
   dm-migrations
   dm-postgres-adapter
+  rake
   rspec
   rubocop
   shotgun
